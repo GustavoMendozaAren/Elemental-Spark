@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+    public string nivel01Name;
+
     public void StartButton()
     {
-        SceneManager.LoadScene("EscenaBase");
+        SceneManager.LoadScene(nivel01Name);
     }
     public void ExitButton()
     {
