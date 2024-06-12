@@ -8,6 +8,7 @@ public class PauseManager : MonoBehaviour
     public GameObject pausePanel;
     public GameObject winPanel;
     public WinCondition winCondition;
+    public string reloadSceneName;
 
     private void Start()
     {
@@ -53,7 +54,7 @@ public class PauseManager : MonoBehaviour
     public void ResetButton() 
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("EscenaBase");
+        SceneManager.LoadScene(reloadSceneName);
     }
 
     
