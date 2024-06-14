@@ -20,12 +20,29 @@ public class PlayerMovement : MonoBehaviour
 
     // GroundCheck transform variable
     public Transform groundCheck;
+    private bool isGrounded;
+
+    // Attack
+    public Transform attackCheck;
+    private bool right = true;
+    RaycastHit2D rayAttack;
+
+    [HideInInspector]
+    public bool effectiveAttack = false;
+
 
     void Awake()
     {
         // Initializing rigid body variable
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+    }
+
+    private void Update()
+    {
+        CheckOnGround();
+
+        Debug.DrawRay(attackCheck.position, Vector2.right * 1.1f, Color.red);
     }
 
     void FixedUpdate()
@@ -42,11 +59,13 @@ public class PlayerMovement : MonoBehaviour
         // Change direction of sprite
         if (moveInput > 0)
         {
+            right = true;
             ChangeDirection(5);
             anim.SetBool("Running", true);
         }
         else if (moveInput < 0)
         {
+            right = false;
             ChangeDirection(-5);
             anim.SetBool("Running", true);
         }
@@ -58,6 +77,16 @@ public class PlayerMovement : MonoBehaviour
 
         // Apply movement horizontally using Rigidbody2D
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+    }
+
+    void CheckOnGround() 
+    {
+        isGrounded = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.4f, LayerMask.GetMask("Ground"));
+
+        if (isGrounded) 
+        {
+            anim.SetBool("Jumping", false);
+        }
     }
 
     void PlayerJump()
@@ -72,8 +101,31 @@ public class PlayerMovement : MonoBehaviour
             {
                 // Apply jump force vertically using Rigidbody2D
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                anim.SetBool("Jumping", true);
             }
+
         }
+    }
+
+    // Player atack ability
+    public void PlayerAtackButton()
+    {
+        anim.SetTrigger("Atack");
+        if (right)
+        {
+            rayAttack = Physics2D.Raycast(attackCheck.position, Vector2.right, 1.1f, LayerMask.GetMask("Enemy"));
+        }
+        else
+        {
+            rayAttack = Physics2D.Raycast(attackCheck.position, Vector2.left, 1.1f, LayerMask.GetMask("Enemy"));
+        }
+
+        if (rayAttack)
+        {
+            effectiveAttack = true;
+            Debug.Log("Attacked");
+        }
+
     }
 
     void ChangeDirection(int direction)
@@ -87,4 +139,6 @@ public class PlayerMovement : MonoBehaviour
     {
         jumped = true;
     }
+
+    
 }

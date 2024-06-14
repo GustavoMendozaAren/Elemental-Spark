@@ -1,0 +1,17 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class WaterScript : MonoBehaviour
+{
+    public GameObject deadPanel;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player")) 
+        {
+            deadPanel.SetActive(true);
+            Time.timeScale = 0f;
+        }
+    }
+}
