@@ -501,11 +501,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
 --- !u!1 &728915583
-=======
---- !u!1 &734140312
->>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -513,33 +509,21 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
   - component: {fileID: 728915585}
   - component: {fileID: 728915584}
   m_Layer: 0
   m_Name: MainMenuMusic
-=======
-  - component: {fileID: 734140314}
-  - component: {fileID: 734140313}
-  m_Layer: 0
-  m_Name: ButtonsSoundsGUI
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
 --- !u!82 &728915584
-=======
---- !u!82 &734140313
->>>>>>> Stashed changes
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 728915583}
   m_Enabled: 1
   serializedVersion: 4
@@ -547,25 +531,12 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 0beda13df2e114ee3909e3c8f6da5c02, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.193
-=======
-  m_GameObject: {fileID: 734140312}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: a5213094efca34ba8b5899d278a7980f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 15e68c0359adc4831bc43912f3a70eb4, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
->>>>>>> Stashed changes
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-<<<<<<< Updated upstream
   Priority: 223
-=======
-  Priority: 18
->>>>>>> Stashed changes
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -643,27 +614,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-<<<<<<< Updated upstream
 --- !u!4 &728915585
-=======
---- !u!4 &734140314
->>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 728915583}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 767.73706, y: 532.9095, z: -3.7692595}
-=======
-  m_GameObject: {fileID: 734140312}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 635.6113, y: 509.64075, z: 7.246894}
->>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -900,11 +860,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-<<<<<<< Updated upstream
       - m_Target: {fileID: 1475016135}
-=======
-      - m_Target: {fileID: 734140313}
->>>>>>> Stashed changes
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -1076,11 +1032,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
 --- !u!1 &1475016133
-=======
---- !u!1 &1548522153
->>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1088,23 +1040,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
   - component: {fileID: 1475016134}
   - component: {fileID: 1475016135}
   m_Layer: 0
   m_Name: ButtonSound1
-=======
-  - component: {fileID: 1548522155}
-  - component: {fileID: 1548522154}
-  m_Layer: 0
-  m_Name: MenuMusic
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
 --- !u!4 &1475016134
 Transform:
   m_ObjectHideFlags: 0
@@ -1121,15 +1065,11 @@ Transform:
   m_Father: {fileID: 636082250}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1475016135
-=======
---- !u!82 &1548522154
->>>>>>> Stashed changes
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 1475016133}
   m_Enabled: 1
   serializedVersion: 4
@@ -1143,21 +1083,6 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 71
-=======
-  m_GameObject: {fileID: 1548522153}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: a5213094efca34ba8b5899d278a7980f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: ae3276e23ddb947b38f8b3e0a67965fa, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.141
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
->>>>>>> Stashed changes
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1235,24 +1160,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-<<<<<<< Updated upstream
-=======
---- !u!4 &1548522155
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548522153}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
 --- !u!1 &1763490725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1497,11 +1404,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-<<<<<<< Updated upstream
       - m_Target: {fileID: 57275970}
-=======
-      - m_Target: {fileID: 734140313}
->>>>>>> Stashed changes
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -1559,9 +1462,4 @@ SceneRoots:
   - {fileID: 576684688}
   - {fileID: 671269425}
   - {fileID: 1402786323}
-<<<<<<< Updated upstream
   - {fileID: 728915585}
-=======
-  - {fileID: 1548522155}
-  - {fileID: 734140314}
->>>>>>> Stashed changes
