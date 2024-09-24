@@ -294,10 +294,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5452500991119421939, guid: 34c94341522c01243850f9bcf69f4dee, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7134469005952048088, guid: 34c94341522c01243850f9bcf69f4dee, type: 3}
       propertyPath: deadPanel
       value: 

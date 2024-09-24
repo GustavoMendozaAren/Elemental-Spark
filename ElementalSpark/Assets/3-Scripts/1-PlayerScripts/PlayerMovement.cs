@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
     void PlayerJump()
     {
         // Check for jump input
-        if (jumped)
+        if (jumped || Input.GetKeyDown(KeyCode.Space))
         {
             jumped = false;
             // Check if the player is grounded before jumping
