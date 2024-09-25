@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         CheckOnGround();
+        PlayerJump();
 
         Debug.DrawRay(attackCheck.position, Vector2.right * 1.1f, Color.red);
     }
@@ -48,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         PlayerWalk();
-        PlayerJump();
+        
     }
 
     void PlayerWalk()
