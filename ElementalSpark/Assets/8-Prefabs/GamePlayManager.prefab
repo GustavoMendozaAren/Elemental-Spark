@@ -47,3 +47,4 @@ MonoBehaviour:
   pausePanel: {fileID: 0}
   winPanel: {fileID: 0}
   winCondition: {fileID: 0}
+  reloadSceneName: BG FINAL
