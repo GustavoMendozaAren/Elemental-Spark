@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 6986111372256003014}
   - component: {fileID: 3784892464104062480}
   - component: {fileID: 4328185864958125466}
+  - component: {fileID: 4692033896649423920}
   m_Layer: 7
   m_Name: EnemyRocky
   m_TagString: Enemy
@@ -140,7 +141,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 3
   m_Sprite: {fileID: 1545526936, guid: 63129e26cba32d5418a618388f6609b1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -260,4 +261,17 @@ MonoBehaviour:
   moveSpeed: 2.5
   down_Collision: {fileID: 7668220622403508261}
   visitonTransform: {fileID: 4096597875323731284}
-  playerSc: {fileID: 0}
+--- !u!114 &4692033896649423920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5939433130530555784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14cb18cd3301c1d4589f99bde8bd61b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaMaxima: 3
+  rockyScript: {fileID: 4328185864958125466}

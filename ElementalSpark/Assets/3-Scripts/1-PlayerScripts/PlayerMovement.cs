@@ -26,9 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform attackCheck;
     private bool right = true;
     RaycastHit2D rayAttack;
-
-    [HideInInspector]
-    public bool effectiveAttack = false;
+    public Collider2D zonaDeGolpe;
 
 
     void Awake()
@@ -108,6 +106,33 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void PlayerAtackButton()
+    {
+        anim.SetTrigger("Atack");
+        StartCoroutine(ActivarZonaDeGolpe());
+    }
+
+    private IEnumerator ActivarZonaDeGolpe()
+    {
+        // Activa la zona de golpe y espera un breve momento
+        zonaDeGolpe.enabled = true;
+        yield return new WaitForSeconds(.25f);
+        zonaDeGolpe.enabled = false; // Desactiva la zona de golpe después de atacar
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (zonaDeGolpe.enabled && collision.CompareTag("Enemy"))
+        {
+            // Obtiene el script de vida del enemigo y aplica el daño
+            RockyVida vidaEnemigo = collision.GetComponent<RockyVida>();
+            if (vidaEnemigo != null)
+            {
+                vidaEnemigo.ReducirVida(1);
+            }
+        }
+    }
+    /*
     // Player atack ability
     public void PlayerAtackButton()
     {
@@ -123,11 +148,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (rayAttack)
         {
-            effectiveAttack = true;
-            Debug.Log("Attacked");
+            RockyVida rockyVida = GetComponent<RockyVida>();
+            if(rockyVida != null)
+            {
+                rockyVida.ReducirVida(1);
+            }
         }
 
-    }
+    }*/
 
     void ChangeDirection(int direction)
     {

@@ -16,11 +16,6 @@ public class RockyScript : MonoBehaviour
     public Transform visitonTransform;
     private RaycastHit2D hit;
 
-    public PlayerMovement playerSc;
-    private bool isDead = false;
-
-
-
     private void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
@@ -34,13 +29,10 @@ public class RockyScript : MonoBehaviour
 
     private void Update()
     {
-        if (!isDead)
-        {
-            CheckCollision();
-            EnemyVision();
-            EnemyAtackAnimations();
-        }
-        DeadCheck();
+
+        CheckCollision();
+        EnemyVision();
+        EnemyAtackAnimations();
     }
 
     private void FixedUpdate()
@@ -48,30 +40,20 @@ public class RockyScript : MonoBehaviour
         EnemyMovement();
     }
 
-    void DeadCheck() 
-    {
-        if (playerSc.effectiveAttack)
-        {
-            isDead = true;
-            anim.SetBool("Dead", true);
-        }
-    }
+
 
     void EnemyMovement() 
     {
-        if (!isDead)
+        if (moveRight)
         {
-            if (moveRight)
-            {
-                myBody.velocity = new Vector2(moveSpeed, myBody.velocity.y);
-            }
-            else
-            {
-                myBody.velocity = new Vector2(-moveSpeed, myBody.velocity.y);
-            }
-
-            anim.SetBool("Move", true);
+            myBody.velocity = new Vector2(moveSpeed, myBody.velocity.y);
         }
+        else
+        {
+            myBody.velocity = new Vector2(-moveSpeed, myBody.velocity.y);
+        }
+
+        anim.SetBool("Move", true);
     }
 
     void CheckCollision() 
