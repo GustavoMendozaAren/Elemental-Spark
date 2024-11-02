@@ -24,6 +24,7 @@ public class RockyVida : MonoBehaviour
         if (vidaActual <= 0)
         {
             Muerte();
+            VariablesEstaticas.barrasDeErgia++;
         }
     }
 

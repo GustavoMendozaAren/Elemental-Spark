@@ -12,6 +12,7 @@ public class RockyScript : MonoBehaviour
 
     public Transform down_Collision;
 
+
     // Vision
     public Transform visitonTransform;
     private RaycastHit2D hit;
@@ -108,6 +109,11 @@ public class RockyScript : MonoBehaviour
         transform.localScale = tempScale;  
     }
 
+    public void CambiardireccionPublico()
+    {
+        ChangeDirection();
+    }
+
     // Damage to player
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -119,6 +125,8 @@ public class RockyScript : MonoBehaviour
             Debug.Log("Damage");
         }
     }
+
+
 
 
 } // Class
