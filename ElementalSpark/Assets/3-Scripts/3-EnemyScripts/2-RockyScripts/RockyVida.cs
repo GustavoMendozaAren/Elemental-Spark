@@ -37,7 +37,7 @@ public class RockyVida : MonoBehaviour
 
     private IEnumerator DesactivarEnemigo()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
 
     }

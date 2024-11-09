@@ -39,5 +39,10 @@ public class PlayerDamage : MonoBehaviour
         DeadFunction();
     }
 
+    public void DamageToPlayerPublic()
+    {
+        DamageToPlayer();
+    }
+
 
 }

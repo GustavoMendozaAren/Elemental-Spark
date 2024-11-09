@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     // Attack
     public Transform attackCheck;
-    private bool right = true;
+    //private bool right = true;
     RaycastHit2D rayAttack;
     public Collider2D zonaDeGolpe;
 
@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         CheckOnGround();
-        PlayerJump();
+        
 
         Debug.DrawRay(attackCheck.position, Vector2.right * 1.1f, Color.red);
     }
@@ -47,7 +47,8 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         PlayerWalk();
-        
+        PlayerJump();
+
     }
 
     void PlayerWalk()
@@ -58,13 +59,13 @@ public class PlayerMovement : MonoBehaviour
         // Change direction of sprite
         if (moveInput > 0)
         {
-            right = true;
+            //right = true;
             ChangeDirection(5);
             anim.SetBool("Running", true);
         }
         else if (moveInput < 0)
         {
-            right = false;
+            //right = false;
             ChangeDirection(-5);
             anim.SetBool("Running", true);
         }
@@ -132,30 +133,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-    /*
-    // Player atack ability
-    public void PlayerAtackButton()
-    {
-        anim.SetTrigger("Atack");
-        if (right)
-        {
-            rayAttack = Physics2D.Raycast(attackCheck.position, Vector2.right, 1.1f, LayerMask.GetMask("Enemy"));
-        }
-        else
-        {
-            rayAttack = Physics2D.Raycast(attackCheck.position, Vector2.left, 1.1f, LayerMask.GetMask("Enemy"));
-        }
-
-        if (rayAttack)
-        {
-            RockyVida rockyVida = GetComponent<RockyVida>();
-            if(rockyVida != null)
-            {
-                rockyVida.ReducirVida(1);
-            }
-        }
-
-    }*/
 
     void ChangeDirection(int direction)
     {
