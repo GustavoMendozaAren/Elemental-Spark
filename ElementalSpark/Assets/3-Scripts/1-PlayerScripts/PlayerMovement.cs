@@ -28,6 +28,10 @@ public class PlayerMovement : MonoBehaviour
     RaycastHit2D rayAttack;
     public Collider2D zonaDeGolpe;
 
+    private bool leftMoveBttn = false;
+    private bool rightMoveBttn = false;
+
+    private float directionVar = 0f;
 
     void Awake()
     {
@@ -53,30 +57,32 @@ public class PlayerMovement : MonoBehaviour
 
     void PlayerWalk()
     {
-        // Get input from horizontal axis (A/D keys or left/right arrow keys)
-        float moveInput = Input.GetAxisRaw("Horizontal");
-
         // Change direction of sprite
-        if (moveInput > 0)
+        //if (moveInput > 0)
+        if (rightMoveBttn)
         {
             //right = true;
             ChangeDirection(5);
             anim.SetBool("Running", true);
+            directionVar = 1f;
         }
-        else if (moveInput < 0)
+        //else if (moveInput < 0)
+        else if (leftMoveBttn)
         {
             //right = false;
             ChangeDirection(-5);
             anim.SetBool("Running", true);
+            directionVar = 1f;
         }
         else
         {
             anim.SetBool("Running", false);
+            directionVar = 0f;
         }
             
 
         // Apply movement horizontally using Rigidbody2D
-        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(directionVar * moveSpeed, rb.velocity.y);
     }
 
     void CheckOnGround() 
@@ -146,5 +152,23 @@ public class PlayerMovement : MonoBehaviour
         jumped = true;
     }
 
-    
+    public void IniciarMoverDerecha()
+    {
+        rightMoveBttn = true;
+    }
+
+    public void DetenerMoverDerecha()
+    {
+        rightMoveBttn = false;
+    }
+
+    public void IniciarMoverIzquierda()
+    {
+        leftMoveBttn = true;
+    }
+
+    public void DetenerMoverIzquierda()
+    {
+        leftMoveBttn = false;
+    }
 }
